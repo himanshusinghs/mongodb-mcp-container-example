@@ -1,0 +1,26 @@
+{
+  "servers": {
+    "mongodb-mcp-podman": {
+      "type": "stdio",
+      "command": "/full/path/to/podman",
+      "args": [
+        "run",
+        "--name",
+        "mdb-mcp-server",
+        "--network",
+        "mongo-8013", // This has to be the NETWORK_NAME you selected earlier
+        "--rm",
+        "-i",
+        "-e",
+        "'MDB_MCP_READ_ONLY=true'",
+        "-e",
+        "MDB_MCP_CONNECTION_STRING",
+        "mongodb/mongodb-mcp-server:latest"
+      ],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb://mongo8013:27017" // This has to be the MDB_MCP_CONNECTION_STRING you created earlier
+      }
+    }
+  },
+  "inputs": []
+}
