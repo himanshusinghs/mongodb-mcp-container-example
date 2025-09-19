@@ -100,7 +100,7 @@ podman run \
 
 ### MCP Configuration
 
-Create or update your MCP configuration file (usually `~/.vscode/settings.json` or similar) with the content from `sample-mcp.json`:
+Create or update your MCP configuration file (usually `~/.vscode/mcp.json` or similar) with the content from `sample-mcp.json`:
 
 ```json
 {
