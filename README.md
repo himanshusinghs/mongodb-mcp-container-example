@@ -26,8 +26,8 @@ This example shows how to:
 ### 1. Run the MongoDB Setup
 
 ```bash
-chmod +x run-mongodb.sh
-./run-mongodb.sh
+chmod +x setup-mcp-mongodb.sh
+./setup-mcp-mongodb.sh
 ```
 
 This script will:
@@ -184,7 +184,7 @@ podman run --rm --network mongo-8013 -it mongo:latest mongosh mongodb://mongo801
 To use Docker instead of Podman, simply replace `podman` with `docker` in all commands:
 
 ```bash
-# In run-mongodb.sh, change:
+# In setup-mcp-mongodb.sh, change:
 podman network create $NETWORK_NAME
 # to:
 docker network create $NETWORK_NAME
